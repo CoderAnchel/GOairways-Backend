@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to GOairways</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #333333;
+        }
+        .content {
+            color: #555555;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999999;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 90%;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="header">
+        <img src="./biglogo.svg" alt="GOairways" width="200">
+    </div>
+    <div class="content">
+        <p>Thank you for choosing GOairways! Your verification PIN is:</p>
+        <h2 style="text-align: center; color: #e03131;">{{.PIN}}</h2>
+        <p>To complete your log-in, please enter this PIN in the verification field.</p>
+    </div>
+    <div class="footer">
+        <p>If you did not request this email, please ignore it.</p>
+        <p>&copy; 2024 GOairways. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
