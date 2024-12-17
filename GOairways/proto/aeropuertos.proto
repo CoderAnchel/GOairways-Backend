@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package aeropuerto;
+
+option go_package = "./proto/aeropuertos";
+
+service AereopuertosService {
+  rpc GetRutas(GetAereopuertosRequest) returns (GetAereopuertosResponse) {}
+}
+
+// Solicitud para obtener aeropuertos
+message GetAereopuertosRequest {
+  uint32 id = 1;
+  string nombre = 2;
+  string codigo_iata = 3;
+  string ubicacion = 4;
+  string latitud = 5;
+  string longitud = 6;
+  string zona_horaria = 7;
+  string url = 8;
+}
+
+// Respuesta con una lista de aeropuertos
+message GetAereopuertosResponse {
+  repeated Aereopuerto aereopuertos = 1;  // Aquí utilizas el mensaje Aereopuerto
+}
+
+// Definición de Aereopuerto
+message Aereopuerto {
+  string nombre = 1;
+  string codigo_iata = 2;
+  string ubicacion = 3;
+  double latitud = 4;
+  double longitud = 5;
+  string zona_horaria = 6;
+  string url = 7;
+}
